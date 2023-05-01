@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: Trigger Documentation Update (preview-deploy-vercel)
         run: |
-          curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/YOURNAME/REPONAME/actions/workflows/preview-deploy-vercel.yaml/dispatches --data '{"ref": "main"}'
+          curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/Jan0660/dfmg-template2/actions/workflows/preview-deploy-vercel.yaml/dispatches --data '{"ref": "main"}'
