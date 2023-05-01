@@ -1,0 +1,12 @@
+name: Update Documentation
+on:
+  push:
+    branches:
+      - master
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Documentation Update (preview-deploy-vercel)
+        run: |
+          curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/YOURNAME/REPONAME/actions/workflows/preview-deploy-vercel.yaml/dispatches --data '{"ref": "main"}'
