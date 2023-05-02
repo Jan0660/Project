@@ -6,6 +6,10 @@
 public class Class1
 {
     /// <summary>
+    /// A constant.
+    /// </summary>
+    public const string Const1 = "test";
+    /// <summary>
     /// Does pretty much nothing.
     /// <code language="csharp">
     /// var x = new Class1();
